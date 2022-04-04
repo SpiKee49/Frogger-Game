@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+    <script defer src="setup.js"></script>
+    <script defer src="enviroment.js"></script>
+    <script defer src="obstacles.js"></script>
+    <script defer src="player.js"></script>
+    <script defer src="handlers.js"></script>
+    <script defer src="jquery.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <!-- game screen -->
+    <div class="wrap">
+        <canvas id="canvas1"></canvas><!-- Voda -->
+        <canvas id="canvas2"></canvas><!-- Podlaha -->
+        <canvas id="canvas3"></canvas><!-- Frogger -->
+        <canvas id="canvas4"></canvas><!-- Prekažky -->
+        
+        
+    </div>
+     <!-- audio panel -->
+    <ul class="sound">
+    <li><a onclick="sound()" ><img id="music" src="img/music-on.png"></a></li>
+    <li><a onclick="effects()" ><img id="sfx" src="img/sfx-on.png"></a></li>
+    </ul> 
+    <!-- main screen -->  
+    <div class="controls">
+           
+        <img class="title" src="img/frogger-title.png" alt="frogger-title">
+            
+        <button type="button" >PLAY</button>
+        <button type="button" >INSTRUCTIONS</button>
+        <button type="button" >EXIT</button>
+    </div>
+    <!-- instruction screen -->
+    <div class="instruct">
+        <a onclick="exit();" class="cross"><img src="img/krizik.jpg" alt="cross" ></a>
+        <h1>Instructions</h1>
+        <h3>Goal of the game</h3>
+        <p>Every level is based on score gained, in order to get to next level you need to score at least 400 points in current level except <b>LEVEL 3</b>(it's the last level). Main goal of the game is to get to the final level called <b>SPACE</b> and try to earn as much points as you possibly can.</p>
+        <ul>
+            <li><b>LEVEL 1:</b> avoid cars and get to the other side of the highway</li>
+            <li><b>LEVEL 2:</b> jump on the logs in order to get to the other side don't get in contact with water get on the other shore</li>
+            <li><b>LEVEL 3:</b> jump on the asteroid in order the get to the moon, when the player reaches you gain 100 score points</li>
+        </ul>
+        <h3>Controls</h3>
+        <table>
+            <tr><td><button>▲</button></td><td><button>▼</button></td><td><button>►</button></td><td><button>◄</button></td></tr>
+            <tr><td>MOVE UP</td><td>MOVE DOWN</td><td>MOVE RIGHT</td><td>MOVE LEFT</td></tr>
+        </table>
+    </div>
+    
+    <!-- game over screen -->
+    <div class="over">
+        <img src="img/gameover.png" alt="gameover-picture">
+        <h2>All time highest score<p class="highScore">0</p></h2>
+        <p>Current score was<p class="lastScore">0</p></p>
+        <button type="button" >TRY AGAIN</button>
+        <button type="button" >EXIT TO MENU</button>
+        
+       
+
+    </div>
+
+    
+
+
+
+
+</body>
+</html>
